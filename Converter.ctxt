@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Converter
+comment0.text=\r\n\ Description\ of\ class\ Converter\ here.\r\n\r\n\ @author\ Marcus\ Trujillo\r\n\ @version\ 1/23/18\r\n
+comment1.params=
+comment1.target=Converter()
+comment2.params=
+comment2.target=void\ printInfo()
+comment3.params=
+comment3.target=void\ processUserNumbers()
+comment4.params=userValue
+comment4.target=boolean\ validateNumber(java.lang.String)
+comment5.params=userValue
+comment5.target=void\ evaluateNumber(java.lang.String)
+comment6.params=
+comment6.target=void\ processFileNumbers()
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+numComments=8
