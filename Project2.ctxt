@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Project2
+comment1.params=
+comment1.target=Project2()
+comment1.text=\r\n\ instantiates\ our\ scanner\ to\ get\ user\ input\r\n
+comment2.params=
+comment2.target=void\ printInfo()
+comment2.text=\r\n\ Prints\ an\ introduction\ with\ instructions\ on\ what\ the\ user\ is\ to\ do.\r\n
+comment3.params=
+comment3.target=void\ processUserNumbers()
+comment3.text=\r\n\ This\ takes\ the\ user's\ input\ from\ the\ keyboard\ and\ processes\ it\ and\ prints\ results\ .\ \r\n
+comment4.params=userValue
+comment4.target=boolean\ validateNumber(java.lang.String)
+comment4.text=\r\n\ This\ validates\ whatever\ the\ current\ value\ is\r\n\ @param\ userValue\ is\ the\ string\ of\ whatever\ value\ we\ need\ to\ validate.\ \r\n\ @return\ true\ if\ the\ number\ is\ valid\ and\ false\ if\ it\ isn't.\ \r\n
+comment5.params=userValue
+comment5.target=int\ evaluateNumber(java.lang.String)
+comment5.text=\r\n\ Converts\ the\ value\ given\ into\ decimal.\ It's\ assumed\ that\ validation\ has\ already\ occurred\r\n\ @param\ userValue\ is\ the\ string\ of\ the\ value\ we're\ evaluating.\ \r\n\ @return\ the\ newly\ converted\ decimal\ number.\ \r\n
+comment6.params=
+comment6.target=void\ processFileNumbers()
+comment6.text=\r\n\ Reads\ from\ an\ input\ .txt\ file\ and\ writes\ out\ a\ report\ giving\ the\ string,\ if\ it\ was\ valid,\ and\ the\ conversion\ to\ decimal\ if\ it\ was\ valid.\ \r\n
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+comment7.text=\r\n\ The\ main\ method\ that\ calls\ all\ the\ necessary\ methods.\ \r\n
+numComments=8

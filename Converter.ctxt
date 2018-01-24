@@ -1,18 +1,25 @@
 #BlueJ class context
 comment0.target=Converter
-comment0.text=\r\n\ Description\ of\ class\ Converter\ here.\r\n\r\n\ @author\ Marcus\ Trujillo\r\n\ @version\ 1/23/18\r\n
+comment0.text=\r\n\ @author\ Marcus\ Trujillo\r\n\ Assignment\ \#2\ \:\ Binary\ Converter\r\n\ \r\n\ Converter\ takes\ a\ positive\ binary\ value,\ either\ from\ user\ input\ on\ the\ keyboard\ or\ from\ a\ document,\ and\ if\ it\ is\ valid,\ converts\ it\ to\ a\ decimal\ value.\ Validation\ \r\n\ requires\ that\ the\ value\ be\ 8bits,\ and\ an\ actual\ binary\ number\ (meaning\ contains\ no\ values\ of\ 2\ or\ higher).\r\n\ \r\n\ CS2050-003\r\n\ @version\ 1\r\n
 comment1.params=
 comment1.target=Converter()
+comment1.text=\r\n\ \r\n
 comment2.params=
 comment2.target=void\ printInfo()
+comment2.text=\r\n\ \r\n
 comment3.params=
 comment3.target=void\ processUserNumbers()
+comment3.text=\r\n\ \r\n
 comment4.params=userValue
 comment4.target=boolean\ validateNumber(java.lang.String)
+comment4.text=\r\n\ \r\n
 comment5.params=userValue
-comment5.target=void\ evaluateNumber(java.lang.String)
+comment5.target=int\ evaluateNumber(java.lang.String)
+comment5.text=\r\n\ \r\n
 comment6.params=
 comment6.target=void\ processFileNumbers()
+comment6.text=\r\n\ \r\n
 comment7.params=args
 comment7.target=void\ main(java.lang.String[])
+comment7.text=\r\n\ \r\n
 numComments=8
