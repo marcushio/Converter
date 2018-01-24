@@ -26,6 +26,7 @@ import java.nio.charset.Charset;
 public class Project2
 {
     private Scanner keyboard; 
+    String userValue; 
   
     /**
      * instantiates our scanner to get user input
@@ -50,21 +51,22 @@ public class Project2
      */
     private void processUserNumbers(){
         System.out.println("How many values do you have?"); 
-        String input = keyboard.nextLine(); 
+        String input = takeUserInput();  
         int rounds = Integer.parseInt(input); 
         for(int i = 0; i < rounds; i++){
             System.out.println("Enter your 8bit value \n >>"); 
-            String userValue = keyboard.nextLine(); 
-            if(validateNumber(userValue)){
+            userValue = takeUserInput(); 
+            if(validateNumber()){
                 int value = Integer.parseInt(userValue); 
-                evaluateNumber(userValue); 
+                int decimal = evaluateNumber(); 
+                System.out.println("string: " + userValue);
+                System.out.println("status: valid"); 
+                System.out.println("decimal value: " + decimal); 
             } else {
                 System.out.println("string: " + userValue); 
                 System.out.println("status: invalid"); 
-            }
-            
+            }          
         }
-        
     }
     
     
@@ -73,8 +75,9 @@ public class Project2
      * @param userValue is the string of whatever value we need to validate. 
      * @return true if the number is valid and false if it isn't. 
      */
-    private boolean validateNumber(String userValue){
+    private boolean validateNumber(){
         boolean valid = false;
+        
         if(userValue.length() == 8){
             for(int i = 0; i < userValue.length(); i++){
                 int evaluated = Character.getNumericValue(userValue.charAt(i));
@@ -92,13 +95,9 @@ public class Project2
      * @param userValue is the string of the value we're evaluating. 
      * @return the newly converted decimal number. 
      */
-    private int evaluateNumber(String userValue){
+    private int evaluateNumber(){
         int decimal = Integer.parseInt(userValue, 2);
-        //System.out.println("string: " + userValue);
-        //System.out.println("status: valid"); 
-        //System.out.println("decimal value: " + decimal); 
-        return decimal; 
-        
+        return decimal;         
     }
     
     
@@ -107,18 +106,18 @@ public class Project2
      */
     private void processFileNumbers(){
         try {
-            String filename = keyboard.nextLine(); 
+            String filename = takeUserInput(); 
             Path filePath = Paths.get(filename); 
             System.out.println("Please enter the filename for your output report (include the suffix)"); 
-            BufferedWriter writer = Files.newBufferedWriter(Paths.get(keyboard.nextLine())); 
+            BufferedWriter writer = Files.newBufferedWriter(Paths.get(takeUserInput())); 
             BufferedReader reader = Files.newBufferedReader(filePath);
-            String value = null; 
+            //userValue = null; 
             writer.write("Marcus Trujillo" + System.lineSeparator() + "Project #2 - Binary Numbers" + System.lineSeparator() + System.lineSeparator()); 
-            while((value = reader.readLine()) != null){
-                writer.write("string: " + value + System.lineSeparator()); 
-                if(validateNumber(value)){
+            while((userValue = reader.readLine()) != null){
+                writer.write("string: " + userValue + System.lineSeparator()); 
+                if(validateNumber()){
                     writer.write("status: valid" + System.lineSeparator());   
-                    writer.write("decimal value: " + evaluateNumber(value) + System.lineSeparator() + System.lineSeparator());    
+                    writer.write("decimal value: " + evaluateNumber() + System.lineSeparator() + System.lineSeparator());    
                 } else {
                     writer.write("status: invalid" + System.lineSeparator() + System.lineSeparator());
                 }
@@ -129,7 +128,21 @@ public class Project2
             System.out.println("IO error"); 
         }
     }
+
     
+    /**
+     * user enters input through the keyboard
+     */
+    private String takeUserInput(){
+        String userInput = null; 
+        try{
+            userInput = keyboard.nextLine();
+        } catch (Exception ex){
+            System.err.print(ex); 
+            System.out.println("try typing that again"); 
+        }
+        return userInput; 
+    }
     
     /**
      * The main method that calls all the necessary methods. 
